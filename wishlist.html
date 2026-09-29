@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>WishList</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#ff7f50">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Nunito:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="webheader">
+      <a href="index.html" class="logolink" aria-label="Toy Haven - go to home page"><img src="images/Logo.png" alt="Toy Haven logo" class="logo"></a>
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      <div class="menu-overlay" id="menuoverlay"></div>
+      <nav class="navlinks" id="navlinks">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Shopping Cart</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="wishlist.html">WishList</a>
+      </nav>
+    </header>
+    <main>
+      <div class="wishlistpage">
+        <h1>My WishList:</h1>
+
+        <div id="wishlistitems"></div>
+      </div>
+
+      <div class="endbbuttons">
+        <button id="wishlisttocart" class="add">Add to Cart</button>
+        <a href="products.html" id="continueshop" class="Contiue">Continue Shopping</a>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footerform">
+        <p class="footernewsletter">
+          Sign up for new arrivals, special offers, and exciting toy updates !
+        </p>
+        <form
+          class="newsletter"
+          action="submit"
+          method="get"
+        >
+          <label for="email" class="visuallyhidden">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your email address"
+          >
+          <button type="submit">Join now..</button>
+        </form>
+      </div>
+
+      <div class="about">
+        <img src="images/footerlogo.png" alt="footerLogo">
+        <p>
+          Toy Haven is a online store in Sri Lanka which offers wide varieties
+          of collectible figures,toys,cars and board games. Find something
+          exciting to play,enjoy and collect.
+        </p>
+      </div>
+
+      <div class="Productcategorylinks">
+        <h2>Product Categories</h2>
+        <ul>
+          <li><a href="products.html#collectible">Collectible Figures</a></li>
+          <li><a href="products.html#games">Board Games</a></li>
+          <li><a href="products.html#Toys">Toys</a></li>
+          <li><a href="products.html#cars">Diecast Model Cars</a></li>
+        </ul>
+      </div>
+
+      <div class="contact">
+        <h2>Contact us</h2>
+        <ul>
+          <li>📞 +94 76 192 7342</li>
+          <li>✉️ toyhaven@gmail.com</li>
+          <li><a href="feedback.html">Your Feedback</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>&copy; 2026 Toy Haven. All rights reserved.</p>
+    </div>
+    <script src="JavaScript/function.js"></script>
+  </body>
+</html>

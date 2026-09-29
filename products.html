@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="manifest" href="manifest.json">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#ff7f50">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500&family=Nunito:ital@0;1&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <header class="webheader">
+      <a href="index.html" class="logolink" aria-label="Toy Haven - go to home page"><img src="images/Logo.png" alt="Toy Haven logo" class="logo"></a>
+        <button class="hamburger" id="hamburger" aria-label="Open navigation menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      <div class="menu-overlay" id="menuoverlay"></div>
+      <nav class="navlinks" id="navlinks">
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="cart.html">Shopping Cart</a>
+        <a href="checkout.html">Checkout</a>
+        <a href="wishlist.html">WishList</a>
+      </nav>
+    </header>
+    <main>
+      <div class="productspage">
+        <h1>Our Products</h1>
+
+        <div class="productcontrol">
+          <div class="filtercategory">
+            <label for="filter"  class="visuallyhidden">Filter by Category:</label>
+            <select id="filter" onchange="filterproducts()">
+              <option value="all">Filter by Category</option>
+              <option value="figures">Collectible Figures</option>
+              <option value="toys">Toys</option>
+              <option value="games">Board Games</option>
+              <option value="cars">Diecast Model Cars</option>
+            </select>
+          </div>
+
+          <br>
+          <div class="productsearch">
+            <label for="searchbox"  class="visuallyhidden">Search:</label>
+            <input
+              type="search"
+              id="searchbox"
+              placeholder="Search any product"
+            >
+            <button type="button" id="searchbtn">&#128269;</button>
+          </div>
+        </div>
+        <div id="noresults" style="display: none">
+          No matching products found.
+        </div>
+
+        <div class="productcontainer">
+          <section class="category" id="collectible">
+            <h2>Collectible Figures</h2>
+
+            <div class="allproducts">
+              <div
+                class="productcards"
+                data-category="figures"
+                data-id="1"
+                data-name="Superhero figures"
+                data-price="1000"
+                data-image="images/Figure1.jpg"
+              >
+                <img src="images/Figure1.jpg" alt="figure1">
+                <p>Superhero figures</p>
+                <p>Rs.1000</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="figures"
+                data-id="2"
+                data-name="Fantasy Figures"
+                data-price="2500"
+                data-image="images/Figure2(2).jpg"
+              >
+                <img src="images/Figure2(2).jpg" alt="figure2">
+                <p>Fantasy Figures</p>
+                <p>Rs.2500</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="figures"
+                data-id="3"
+                data-name="Mini Character Figures"
+                data-price="2000"
+                data-image="images/Figure2.jpg"
+              >
+                <img src="images/Figure2.jpg" alt="figure3">
+                <p>Mini Character Figures</p>
+                <p>Rs.2000</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="figures"
+                data-id="4"
+                data-name="Mini Heros collection"
+                data-price="3400"
+                data-image="images/figure3.jpg"
+              >
+                <img src="images/figure3.jpg" alt="figure4">
+                <p>Mini Heros collection</p>
+                <p>Rs.3400</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="figures"
+                data-id="5"
+                data-name="Robut Action Figures"
+                data-price="4200"
+                data-image="images/Figure4.jpg"
+              >
+                <img src="images/Figure4.jpg" alt="figure5">
+                <p>Robut Action Figures</p>
+                <p>Rs.4200</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="figures"
+                data-id="6"
+                data-name="Racing vehicle Figure"
+                data-price="1700"
+                data-image="images/Figure5.jpg"
+              >
+                <img src="images/Figure5.jpg" alt="figure6">
+                <p>Racing vehicle Figure</p>
+                <p>Rs.1700</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="category" id="Toys">
+            <h2>Toys</h2>
+
+            <div class="allproducts">
+              <div
+                class="productcards"
+                data-category="toys"
+                data-id="7"
+                data-name="Bubble gun"
+                data-price="4400"
+                data-image="images/Toy1.jpg"
+              >
+                <img src="images/Toy1.jpg" alt="toy1">
+                <p>Bubble gun</p>
+                <p>Rs.4400</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="toys"
+                data-id="8"
+                data-name="Plush elephant toy"
+                data-price="5700"
+                data-image="images/Toy3.jpg"
+              >
+                <img src="images/Toy3.jpg" alt="toy2">
+                <p>Plush elephant toy</p>
+                <p>Rs.5700</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="toys"
+                data-id="9"
+                data-name="Toy kitchen set"
+                data-price="5400"
+                data-image="images/Toy4.webp"
+              >
+                <img src="images/Toy4.webp" alt="toy3">
+                <p>Toy kitchen set</p>
+                <p>Rs.5400</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="toys"
+                data-id="10"
+                data-name="Toy Robut"
+                data-price="8600"
+                data-image="images/Toy5.webp"
+              >
+                <img src="images/Toy5.webp" alt="toy4">
+                <p>Toy Robut</p>
+                <p>Rs.8600</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="toys"
+                data-id="11"
+                data-name="Toy Train Set"
+                data-price="4600"
+                data-image="images/Toy6.jpg"
+              >
+                <img src="images/Toy6.jpg" alt="toy5">
+                <p>Toy Train Set</p>
+                <p>Rs.4600</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="toys"
+                data-id="12"
+                data-name="Play dough set"
+                data-price="3400"
+                data-image="images/toy7.jpg"
+              >
+                <img src="images/toy7.jpg" alt="toy6">
+                <p>Play dough set</p>
+                <p>Rs.3400</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="category" id="games">
+            <h2>Board Games</h2>
+
+            <div class="allproducts">
+              <div
+                class="productcards"
+                data-category="games"
+                data-id="13"
+                data-name="Jenga"
+                data-price="7520"
+                data-image="images/Boardgame1.jpg"
+              >
+                <img src="images/Boardgame1.jpg" alt="game1">
+                <p>Jenga</p>
+                <p>Rs.7520</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="games"
+                data-id="14"
+                data-name="Monopoly"
+                data-price="5300"
+                data-image="images/Boardgame2.jpg"
+              >
+                <img src="images/Boardgame2.jpg" alt="game2">
+                <p>Monopoly</p>
+                <p>Rs.5300</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="games"
+                data-id="15"
+                data-name="UNO"
+                data-price="3700"
+                data-image="images/Boardgame3.webp"
+              >
+                <img src="images/Boardgame3.webp" alt="game3">
+                <p>UNO</p>
+                <p>Rs.3700</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="games"
+                data-id="16"
+                data-name="Snake and Ladders"
+                data-price="2300"
+                data-image="images/Boardgame4.jpg"
+              >
+                <img src="images/Boardgame4.jpg" alt="game4">
+                <p>Snake and Ladders</p>
+                <p>Rs.2300</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="games"
+                data-id="17"
+                data-name="Ludo"
+                data-price="3300"
+                data-image="images/Boardgame5.jpg"
+              >
+                <img src="images/Boardgame5.jpg" alt="game5">
+                <p>Ludo</p>
+                <p>Rs.3300</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="games"
+                data-id="18"
+                data-name="Chess"
+                data-price="4300"
+                data-image="images/Boardgame6.jpg"
+              >
+                <img src="images/Boardgame6.jpg" alt="game6">
+                <p>Chess</p>
+                <p>Rs.4300</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="games"
+                data-id="19"
+                data-name="Scrabble"
+                data-price="5200"
+                data-image="images/Boardgame7.avif"
+              >
+                <img src="images/Boardgame7.avif" alt="game7">
+                <p>Scrabble</p>
+                <p>Rs.5200</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="category" id="cars">
+            <h2>Diecast Model Cars</h2>
+
+            <div class="allproducts">
+              <div
+                class="productcards"
+                data-category="cars"
+                data-id="20"
+                data-name="Emergency vehicles"
+                data-price="2300"
+                data-image="images/Diecastcars1.jpg"
+              >
+                <img src="images/Diecastcars1.jpg" alt="cars1">
+                <p>Emergency vehicles</p>
+                <p>Rs.2300</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="cars"
+                data-id="21"
+                data-name="Sports Cars"
+                data-price="4600"
+                data-image="images/Cars2.jpg"
+              >
+                <img src="images/Cars2.jpg" alt="cars2">
+                <p>Sports Cars</p>
+                <p>Rs.4600</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="cars"
+                data-id="22"
+                data-name="Racing car"
+                data-price="3100"
+                data-image="images/Cars3.jpg"
+              >
+                <img src="images/Cars3.jpg" alt="cars3">
+                <p>Racing car</p>
+                <p>Rs.3100</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="cars"
+                data-id="23"
+                data-name="Classic Cars"
+                data-price="2500"
+                data-image="images/Cars4.jpg"
+              >
+                <img src="images/Cars4.jpg" alt="cars4">
+                <p>Classic Cars</p>
+                <p>Rs.2500</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+
+              <div
+                class="productcards"
+                data-category="cars"
+                data-id="24"
+                data-name="Miniature Car Set"
+                data-price="2000"
+                data-image="images/Cars5.jpg"
+              >
+                <img src="images/Cars5.jpg" alt="cars5">
+                <p>Miniature Car Set</p>
+                <p>Rs.2000</p>
+                <div class="buttons">
+                  <button class="addtocart" onclick="addtocart(this)">
+                    <span class="icon">&#128722;</span>Add to Cart
+                  </button>
+
+                  <button class="wishbtn">&#9825;</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </div>
+
+      <div id="productmodal" class="modaloverlay" style="display: none">
+        <div class="modalbox">
+          <button class="modalclose" id="modalclose">&times;</button>
+          <img id="modalimage" src="images/Figure1.jpg" alt="productpreview">
+          <p id="modalcategory" class="modalcategory"></p>
+          <h3 id="modalname">Loading..</h3>
+          <p id="modalprice"></p>
+          <button id="modaladdtocart">Add to Cart</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footerform">
+        <p class="footernewsletter">
+          Sign up for new arrivals, special offers, and exciting toy updates !
+        </p>
+        <form
+          class="newsletter"
+          action="submit"
+          method="get"
+        >
+          <label for="email" class="visuallyhidden">Email Address:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            placeholder="Enter your email address"
+          >
+          <button type="submit">Join now..</button>
+        </form>
+        <p id="newsletterstore"></p>
+      </div>
+
+      <div class="about">
+        <img src="images/footerlogo.png" alt="footerLogo">
+        <p>
+          Toy Haven is a online store in Sri Lanka which offers wide varieties
+          of collectible figures,toys,cars and board games. Find something
+          exciting to play,enjoy and collect.
+        </p>
+      </div>
+
+      <div class="Productcategorylinks">
+        <h3>Product Categories</h3>
+        <ul>
+          <li>
+            <a href="products.html#collectible">Collectible Figures</a>
+          </li>
+          <li><a href="products.html#games">Board Games</a></li>
+          <li><a href="products.html#Toys">Toys</a></li>
+          <li><a href="products.html#cars">Diecast Model Cars</a></li>
+        </ul>
+      </div>
+
+      <div class="contact">
+        <h3>Contact us</h3>
+        <ul>
+          <li>📞 +94 76 192 7342</li>
+          <li>✉️ toyhaven@gmail.com</li>
+          <li><a href="feedback.html">Your Feedback</a></li>
+        </ul>
+      </div>
+    </footer>
+    <div class="copyright">
+      <p>&copy; 2026 Toy Haven. All rights reserved.</p>
+    </div>
+    <div id="wishlistpopup" class="wishlistpopup" style="display: none">
+      <button type="button" data-status="interested">Interested</button>
+      <button type="button" data-status="notinterested">Not Interested</button>
+      <button type="button" data-status="owned">Owned</button>
+    </div>
+    <script src="JavaScript/function.js"></script>
+  </body>
+</html>
